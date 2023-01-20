@@ -2,8 +2,8 @@
 ## Linux Ubuntu (1-5)
 * Task 1-5
 ![command ubuntu](https://github.com/Stepan255/animal_records/blob/main/img/Command_ubuntu.jpg)
-## UML diagrm (task 6)
-![command ubuntu](https://github.com/Stepan255/animal_records/blob/main/img/uml.drawio.png)
+## UML diagram (task 6)
+![UML diagram](https://github.com/Stepan255/animal_records/blob/main/img/uml.drawio.png)
 ## MySQL (task 7 -12)
 7. В подключенном MySQL репозитории создать базу данных “Друзья
 человека”

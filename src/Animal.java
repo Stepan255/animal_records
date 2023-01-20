@@ -54,7 +54,22 @@ public abstract class Animal {
         this.commands = commands;
     }
 
+//    public String getCommandsToString() {
+//        String text = "";
+//        for (String command:
+//             this.commands) {
+//            text += "," + command;
+//        }
+//        return text;
+//    }
+
     public void addCommands(String command) {
         this.commands.add(command);
+    }
+
+    @Override
+    public String toString() {
+        return "[" + this.id + "; " + this.name + "; "
+                + DateHandler.getDateToString(this.birthday) + "; " + this.commands.toString() + "]";
     }
 }

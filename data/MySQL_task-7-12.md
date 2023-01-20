@@ -1,4 +1,4 @@
-
+## MySQL (task 7 -12)
 7. 
     * CREATE DATABASE friends_human;
 8. 

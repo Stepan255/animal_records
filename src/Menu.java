@@ -43,12 +43,12 @@ public class Menu {
         String value = cr.getLine();
         int hashValue = value.hashCode();
         if (hashValue == "1".hashCode()){
-            startCreateAnimal();
+            animal.addCommands("Command");
         } else if (hashValue == "2".hashCode()) {
-            getAnimals();
+            System.out.println(animal.getCommands().toString());
         } else if (hashValue == "3".hashCode()) {
-            findAnimals();}
-        else if (hashValue == "0".hashCode()) {
+            animal.addCommands("Command");
+        } else if (hashValue == "0".hashCode()) {
             start();
         }
 

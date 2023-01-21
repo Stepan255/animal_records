@@ -14,11 +14,51 @@ public class Menu {
             if (hashValue == "1".hashCode()){
                 startCreateAnimal();
             } else if (hashValue == "2".hashCode()) {
-                System.out.println("найти животное");
-            } else if (hashValue == "0".hashCode()) {
+                getAnimals();
+            } else if (hashValue == "3".hashCode()) {
+                findAnimals();}
+            else if (hashValue == "0".hashCode()) {
                 cr.stop();
                 break;
             }
+        }
+    }
+
+    private void findAnimals() {
+        System.out.println("Input id animal");
+        String value = cr.getLine();
+        if (isNumeric(value)){
+            if (Double.parseDouble(value) < 2147483647){
+                Animal animal = r.findAnimal(Integer.parseInt(value));
+                changeAnimal(animal);
+            }
+        }
+    }
+
+    private void changeAnimal(Animal animal) {
+        System.out.println("1 - Add an animal command");
+        System.out.println("2 - Show all animal command");
+        System.out.println("3 - Add animal command");
+        System.out.println("0 - Main menu");
+        String value = cr.getLine();
+        int hashValue = value.hashCode();
+        if (hashValue == "1".hashCode()){
+            startCreateAnimal();
+        } else if (hashValue == "2".hashCode()) {
+            getAnimals();
+        } else if (hashValue == "3".hashCode()) {
+            findAnimals();}
+        else if (hashValue == "0".hashCode()) {
+            start();
+        }
+
+    }
+
+    public void getAnimals(){
+        System.out.println("All animal");
+        for (Animal animal :
+                r.getAnimals()) {
+            System.out.println(animal);
         }
     }
 
@@ -64,14 +104,20 @@ public class Menu {
         if (hashValue == "y".hashCode()){
             r.setAnimal(animal);
             System.out.println("Save successful");
+            new CounterController().add();
         }
         start();
     }
 
     private void mainMenu(){
         System.out.println("Select a menu item by entering the desired number:");
-        System.out.println("1 - Get an animal");
-        System.out.println("2 - Find an animal");
+        System.out.println("1 - Add an animal");
+        System.out.println("2 - All an animal");
+        System.out.println("3 - Find an animal");
         System.out.println("0 - Exit");
+    }
+
+    public static boolean isNumeric(String str) {
+        return str.matches("\\d{10}");
     }
 }

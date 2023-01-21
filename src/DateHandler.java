@@ -35,7 +35,7 @@ public class DateHandler {
             return date;
         } catch (Exception e) {
 
-            e.printStackTrace();
+            System.err.println("incorrect date:" + e.getMessage());
             return new Date(0000,00,00);
         }
 

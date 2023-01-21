@@ -21,3 +21,6 @@
 * Realization on MySQL: [more info about MySQL task 7-12](https://github.com/Stepan255/animal_records/blob/main/data/MySQL_task-7-12.md).
 
 * [DataBase](https://github.com/Stepan255/animal_records/blob/main/data/friends_human.sql)
+
+## Java. Task 13 - 15
+* Realize in this repository.
